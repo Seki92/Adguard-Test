@@ -1,0 +1,641 @@
+bind_host: 0.0.0.0
+bind_port: 3000
+users:
+- name: Seki92
+  password: vgsdhdnjskm,xckxjchxjkxcxkckxmcxcxmcmx
+http_proxy: ""
+language: ""
+rlimit_nofile: 0
+debug_pprof: false
+web_session_ttl: 720
+dns:
+  bind_host: 5.196.65.156
+  port: 5858
+  statistics_interval: 1
+  querylog_enabled: true
+  querylog_file_enabled: true
+  querylog_interval: 90
+  querylog_size_memory: 1000
+  anonymize_client_ip: false
+  protection_enabled: true
+  blocking_mode: refused
+  blocking_ipv4: ""
+  blocking_ipv6: ""
+  blocked_response_ttl: 10
+  parental_block_host: family-block.dns.adguard.com
+  safebrowsing_block_host: standard-block.dns.adguard.com
+  ratelimit: 20
+  ratelimit_whitelist: []
+  refuse_any: true
+  upstream_dns:
+  - https://dns10.quad9.net/dns-query
+  - tls://dns-unfiltered.adguard.com
+  - 1.1.1.1
+  - 1.0.0.1
+  - 1.1.1.2
+  - 1.0.0.2
+  upstream_dns_file: ""
+  bootstrap_dns:
+  - 1.1.1.1
+  - 1.0.0.1
+  - 8.8.8.8
+  all_servers: true
+  fastest_addr: false
+  allowed_clients: []
+  disallowed_clients: []
+  blocked_hosts:
+  - version.bind
+  - id.server
+  - hostname.bind
+  cache_size: 44444444
+  cache_ttl_min: 0
+  cache_ttl_max: 0
+  bogus_nxdomain: []
+  aaaa_disabled: false
+  enable_dnssec: false
+  edns_client_subnet: false
+  max_goroutines: 50
+  ipset: []
+  filtering_enabled: true
+  filters_update_interval: 24
+  parental_enabled: false
+  safesearch_enabled: true
+  safebrowsing_enabled: true
+  safebrowsing_cache_size: 1048576
+  safesearch_cache_size: 1048576
+  parental_cache_size: 1048576
+  cache_time: 30
+  rewrites: []
+  blocked_services: []
+tls:
+  enabled: false
+  server_name: ""
+  force_https: false
+  port_https: 443
+  port_dns_over_tls: 853
+  port_dns_over_quic: 784
+  allow_unencrypted_doh: false
+  strict_sni_check: false
+  certificate_chain: ""
+  private_key: ""
+  certificate_path: ""
+  private_key_path: ""
+filters:
+- enabled: true
+  url: https://raw.githubusercontent.com/Seki92/pihole-listen/master/blockliste
+  name: felix
+  id: 1604583198
+- enabled: true
+  url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+  name: AdGuard DNS filter
+  id: 1604824837
+- enabled: true
+  url: https://www.malwaredomainlist.com/hostslist/hosts.txt
+  name: MalwareDomainList.com Hosts List
+  id: 1604824840
+- enabled: true
+  url: https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts_without_controversies.txt
+  name: Suspicious
+  id: 1604824841
+- enabled: true
+  url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts
+  name: Suspicious1
+  id: 1604824842
+- enabled: true
+  url: https://v.firebog.net/hosts/static/w3kbl.txt
+  name: Suspicious2
+  id: 1604824843
+- enabled: true
+  url: https://v.firebog.net/hosts/BillStearns.txt
+  name: Suspicious3
+  id: 1604824844
+- enabled: true
+  url: https://sysctl.org/cameleon/hosts
+  name: Suspicious4
+  id: 1604824845
+- enabled: true
+  url: https://raw.githubusercontent.com/matomo-org/referrer-spam-blacklist/master/spammers.txt
+  name: Suspicious7
+  id: 1604824846
+- enabled: true
+  url: https://hostsfile.org/Downloads/hosts.txt
+  name: Suspicious8
+  id: 1604824847
+- enabled: true
+  url: https://someonewhocares.org/hosts/zero/hosts
+  name: Suspicious9
+  id: 1604824848
+- enabled: true
+  url: https://raw.githubusercontent.com/Dawsey21/Lists/master/main-blacklist.txt
+  name: Suspicious10
+  id: 1604824849
+- enabled: true
+  url: https://raw.githubusercontent.com/vokins/yhosts/master/hosts
+  name: Suspicious11
+  id: 1604824850
+- enabled: true
+  url: https://winhelp2002.mvps.org/hosts.txt
+  name: Suspicious11
+  id: 1604824851
+- enabled: true
+  url: https://raw.githubusercontent.com/RooneyMcNibNug/pihole-stuff/master/SNAFU.txt
+  name: Suspicious13
+  id: 1604824852
+- enabled: true
+  url: https://hostsfile.mine.nu/hosts0.txt
+  name: Suspicious15
+  id: 1604824853
+- enabled: true
+  url: https://v.firebog.net/hosts/Kowabit.txt
+  name: Suspicious17
+  id: 1604824854
+- enabled: true
+  url: https://adblock.mahakala.is/
+  name: Suspicious18
+  id: 1604824855
+- enabled: true
+  url: https://v.firebog.net/hosts/AdguardDNS.txt
+  name: ad
+  id: 1604824856
+- enabled: true
+  url: https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
+  name: ad1
+  id: 1604824857
+- enabled: true
+  url: https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
+  name: ad2
+  id: 1604824858
+- enabled: true
+  url: https://v.firebog.net/hosts/Easylist.txt
+  name: ad3
+  id: 1604824859
+- enabled: true
+  url: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext
+  name: ad4
+  id: 1604824860
+- enabled: true
+  url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/UncheckyAds/hosts
+  name: ad5
+  id: 1604824861
+- enabled: true
+  url: https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts
+  name: ad6
+  id: 1604824862
+- enabled: true
+  url: https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts
+  name: ad7
+  id: 1604824863
+- enabled: true
+  url: https://v.firebog.net/hosts/Easyprivacy.txt
+  name: track
+  id: 1604824864
+- enabled: true
+  url: https://v.firebog.net/hosts/Prigent-Ads.txt
+  name: track1
+  id: 1604824865
+- enabled: true
+  url: https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt
+  name: track2
+  id: 1604824866
+- enabled: true
+  url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts
+  name: track3
+  id: 1604824867
+- enabled: true
+  url: https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt
+  name: track4
+  id: 1604824868
+- enabled: true
+  url: https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt
+  name: track5
+  id: 1604824869
+- enabled: true
+  url: https://hostfiles.frogeye.fr/firstparty-trackers-hosts.txt
+  name: track6
+  id: 1604824870
+- enabled: true
+  url: https://hostfiles.frogeye.fr/multiparty-trackers-hosts.txt
+  name: track7
+  id: 1604824871
+- enabled: true
+  url: https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt
+  name: track8
+  id: 1604824872
+- enabled: true
+  url: https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt
+  name: track9
+  id: 1604824873
+- enabled: true
+  url: https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/AmazonFireTV.txt
+  name: track10
+  id: 1604824874
+- enabled: true
+  url: https://v.firebog.net/hosts/Airelle-trc.txt
+  name: track11
+  id: 1604824875
+- enabled: true
+  url: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt
+  name: mal1
+  id: 1604824876
+- enabled: true
+  url: https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt
+  name: mal1
+  id: 1604824877
+- enabled: true
+  url: https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt
+  name: mal2
+  id: 1604824878
+- enabled: true
+  url: https://mirror1.malwaredomains.com/files/justdomains
+  name: mal3
+  id: 1604824879
+- enabled: true
+  url: https://v.firebog.net/hosts/Prigent-Malware.txt
+  name: mal4
+  id: 1604824880
+- enabled: true
+  url: https://mirror.cedia.org.ec/malwaredomains/immortal_domains.txt
+  name: mal5
+  id: 1604824881
+- enabled: true
+  url: https://bitbucket.org/ethanr/dns-blacklists/raw/8575c9f96e5b4a1308f2f12394abd86d0927a4a0/bad_lists/Mandiant_APT1_Report_Appendix_D.txt
+  name: mal6
+  id: 1604824882
+- enabled: true
+  url: https://phishing.army/download/phishing_army_blocklist_extended.txt
+  name: mal7
+  id: 1604824883
+- enabled: true
+  url: https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt
+  name: mal8
+  id: 1604824884
+- enabled: true
+  url: https://v.firebog.net/hosts/Shalla-mal.txt
+  name: mal9
+  id: 1604824885
+- enabled: true
+  url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Risk/hosts
+  name: mal10
+  id: 1604824886
+- enabled: true
+  url: https://raw.githubusercontent.com/HorusTeknoloji/TR-PhishingList/master/url-lists.txt
+  name: mal12
+  id: 1604824887
+- enabled: true
+  url: https://v.firebog.net/hosts/Airelle-hrsk.txt
+  name: mal13
+  id: 1604824888
+- enabled: true
+  url: https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt
+  name: adway
+  id: 1604824889
+- enabled: true
+  url: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext
+  name: Peter Lowe's List
+  id: 1604824890
+- enabled: true
+  url: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_14_Annoyances/filter.txt
+  name: cookie
+  id: 1604824891
+- enabled: true
+  url: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_11_Mobile/filter.txt
+  name: mobile
+  id: 1604824892
+- enabled: true
+  url: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_15_DnsFilter/filter.txt
+  name: dns
+  id: 1604824893
+- enabled: true
+  url: https://easylist.to/easylist/easylist.txt
+  name: easy
+  id: 1604824894
+- enabled: true
+  url: https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
+  name: adguard
+  id: 1604824895
+- enabled: true
+  url: https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt
+  name: spam
+  id: 1604824896
+- enabled: true
+  url: https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list
+  name: malwarelist
+  id: 1604824897
+- enabled: true
+  url: https://adaway.org/hosts.txt
+  name: adwaysa
+  id: 1604824898
+- enabled: true
+  url: https://paulgb.github.io/BarbBlock/blacklists/hosts-file.txt
+  name: barbablock
+  id: 1604824899
+whitelist_filters: []
+user_rules:
+- /REGEX/files.surfright.nl
+- '||files.surfright.nl^'''
+- '||freehottube.net^'''
+- '||g.api.mega.co.nz^'''
+- '||oneclient.sfx.ms^'''
+- '||www.grenzenloserflirt.com^'''
+- '@@||raw.githubusercontent.com^$important'''
+- '@@||amazon.de^$important'''
+- '@@||bittrex.com^$important'''
+- '@@||freebitco.in^$important'''
+- '@@||static1.freebitco.in^$important'''
+- '@@||poloniex.com^$important'''
+- '@@||ebesucher.de^'''
+- '@@||rover.ebay.com^$important'''
+- '@@||www.pinterest.com^$important'''
+- '@@||poppen.de^'''
+- '@@||poppen.de/sex-chat^'''
+- '@@||cdn.ravenjs.com^$important'''
+- '@@||joyclub.de^'''
+- '@@||bit.ly^$important'''
+- '@@||axa.de^$important'''
+- '@@||aliexpress.com^$important'''
+- '@@||best.aliexpress.com^$important'''
+- '@@||netflix.com^$important'''
+- '@@||nrdp.nccp.netflix.com^$important'''
+- '@@||customerevents.netflix.com^$important'''
+- '@@||ichnaea.netflix.com^$important'''
+- '@@||erotik.markt.de^$important'''
+- '@@||eronity.com^$important'''
+- '@@||live.eronity.com^$important'''
+- '@@||ae01.alicdn.com^$important'''
+- '@@||alitems.com^$important'''
+- '@@||get3.adobe.com^$important'''
+- '@@||cnimg.joyclub.de^$important'''
+- '@@||cnup6.joyclub.de^$important'''
+- '@@||cnup5.joyclub.de^$important'''
+- '@@||cryptobrowser.site^$important'''
+- '@@||cryptotab.net^$important'''
+- '||rx2.eu1.cryptobrowser.network^$important'''
+- '||safebrowsing.cryptobrowser.today^$important'''
+- '@@||go-updater.brave.com^$important'''
+- '@@||laptop-updates.brave.com^$important'''
+- '@@||aax-eu.amazon-adsystem.com^$important'''
+- '@@||www.markt.de^$important'''
+- '@@||sonypmoglobal.d1.sc.omtrdc.net^$important'''
+- '@@||google.com^$important'''
+- '@@||audible.de^$important'''
+- '@@||ctldl.windowsupdate.com^$important'''
+- '@@||slscr.update.microsoft.com^$important'''
+- '@@||download.windowsupdate.com^$important'''
+- '@@||g.live.com^$important'''
+- '@@||sls.update.microsoft.com^$important'''
+- '@@||slscr.update.microsoft.com^$important'''
+- '@@||www.mamba.ru^$important'''
+- '@@||www.jae1club.com^$important'''
+- '@@||www.microsoft.com^$important'''
+- '@@||widgets.trustedshops.com^$important'''
+- '@@||poolnode.club^$important'''
+- '@@||www.kaufmich.com^$important'''
+- '@@||www.bing.com^$important'''
+- '@@||www.cfos.de^$important'''
+- '@@||www.ecosia.org^$important'''
+- '@@||www.spin.de^$important'''
+- '@@||ccapp.clubcooee.com^$important'''
+- '@@||www.3dgeeks.app^$important'''
+- '@@||www.mydealz.de^$important'''
+- '@@||www.amazon.com^$important'''
+- '@@||www.amazonpreview.com^$important'''
+- '@@||www.grenzwissenschaft-aktuell.de^$important'''
+- '@@||www.netzkino.de^$important'''
+- '@@||www.uavforecast.com^$important'''
+- '@@||www.vodafone.de^$important'''
+- '@@||www.google.de^$important'''
+- '@@||www.sony.net^$important'''
+- '@@||www.mein-rabatt.com^$important'''
+- '@@||www.hidrive.strato.com^$important'''
+- '@@||go.trouter.skype.com^$important'''
+- '@@||www.dkb.de^$important'''
+- '@@||www.bosch-emobility.com^$important'''
+- '@@||www.goingelectric.de^$important'''
+- '@@||www.allego.eu^$important'''
+- '@@||www.static-immobilienscout24.de^$important'''
+- '@@||www.immosuchmaschine.de^$important'''
+- '@@||www.immowelt.de^$important'''
+- '@@||www.immobilienscout24.de^$important'''
+- '@@||www.omronconnect.com^$important'''
+- '@@||www.hornbach.de^$important'''
+- '@@||www.hh-berlin.de^$important'''
+- '@@||mailtrack.io^$important'''
+- '@@||www.aldi-nord.de^$important'''
+- '@@||www.wish.com^$important'''
+- '@@||www.bafa.de^$important'''
+- '@@||www.shop-apotheke.com^$important'''
+- '@@||login.live.com^$important'''
+- '@@||www.carwow.de^$important'''
+- '@@||www.imdb.com^$important'''
+- '@@||www.howoge.de^$important'''
+- '@@||www.wetteronline.de^$important'''
+- '@@||www.welt.de^$important'''
+- '@@||ue.flipboard.com^$important'''
+- '@@||www.futurezone.de^$important'''
+- '@@||ad.flipboard.com^$important'''
+- '@@||www.msn.com^$important'''
+- '@@||www.youtube.com^$important'''
+- '@@||www.sonne-wind-energie.de^$important'''
+- '@@||api.gameanalytics.com^$important'''
+- '@@||www.tinkercad.com^$important'''
+- '@@||www.dhl.de^$important'''
+- '@@||smetrics.dhl.de^$important'''
+- '@@||www.pinterest.de^$important'''
+- '@@||www.radio.de^$important'''
+- '@@||www.hotcleaner.com^$important'''
+- '@@||www.gutscheinaffe.de^$important'''
+- '@@||www.steuer-web.de^$important'''
+- '@@||www.aklamio.com^$important'''
+- '@@||www.speedtest.net^$important'''
+- '@@||www.comdirect.de^$important'''
+- '@@||www.commerzbank.de^$important'''
+- '@@||pipe.skype.com^$important'''
+- '@@||consumer.entitlement.skype.com^$important'''
+- '@@||api.promotions.skype.com^$important'''
+- '@@||www.berliner-sparkasse.de^$important'''
+- '@@||www.immonet.de^$important'''
+- '@@||www.rain-alarm.com^$important'''
+- '@@||www.baidu.com^$important'''
+- '@@||www.preisheld.de^$important'''
+- '@@||www.payback.de^$important'''
+- '@@||www.smarticular.net^$important'''
+- '@@||www.gutscheinheld.de^$important'''
+- '@@||www.n-tv.de^$important'''
+- '@@||web.de^$important'''
+- '@@||www.gmx.net^$important'''
+- '@@||www.misterspex.de^$important'''
+- '@@||www.dns-net.de^$important'''
+- '@@||www.quoka.de^$important'''
+- '@@||update.buhl.de^$important'''
+- '@@||www.buhl.de^$important'''
+- '@@||www.spiegel.de^$important'''
+- '@@||www.chip.de^$important'''
+- '@@||www.finanzen.net^$important'''
+- '@@||www.heise.de^$important'''
+- '@@||www.zdnet.de^$important'''
+- '@@||www.auswaertiges-amt.de^$important'''
+- '@@||www.computerbild.de^$important'''
+- '@@||www.pcwelt.de^$important'''
+- '@@||softwareupdates.amazon.com^$important'''
+- '@@||_http._tcp.security.ubuntu.com^$important'''
+- '@@||_http._tcp.ddebs.ubuntu.com^$important'''
+- '@@||_http._tcp.linux.teamviewer.com^$important'''
+- '@@||_http._tcp.debian.charite.de^$important'''
+- '@@||_http._tcp.mirror.bauhuette.fh-aachen.de^$important'''
+- '@@||_http._tcp.archive.canonical.com^$important'''
+- '@@||_https._tcp.repo.skype.com^$important'''
+- '@@||www.tellows.de^$important'''
+- '@@||www.commerzbanking.de^$important'''
+- '@@||adservice.google.com^$important'''
+- '@@||www.ebay.de^$important'''
+- '@@||autoupdate.geo.opera.com^$important'''
+- '@@||id.google.com^$important'''
+- '@@||www.googleapis.com^$important'''
+- '@@||www.thingiverse.com^$important'''
+- '@@||fonts.gstatic.com^$important'''
+- '@@||forum.qnapclub.de^$important'''
+- '@@||update.qnap.com^$important'''
+- '@@||definitionupdates.microsoft.com^$important'''
+- '@@||browser.pipe.aria.microsoft.com^$important'''
+- '@@||cdn-rocketstream.club^$important'''
+- '@@||clkde.tradedoubler.com^$important'''
+- '@@||tags.adsafety.net^$important'''
+- '@@||ad.doubleclick.net^$important'''
+- '@@||developer.api.autodesk.com^$important'''
+- '@@||sourceforge.net^$important'''
+- '@@||links.12gebrauchtwagen.de^$important'''
+- '@@||src.ebay-us.com^$important'''
+- '@@||gha.ebay.de^$important'''
+- '@@||smetrics.payback.de^$important'''
+- '@@||strato.de^$important'''
+- '||vpi.hfghty564hjghjhg.tech^$important'''
+- '@@||image.email.barclaycard.de^$important'''
+- '@@||telemetry.dropbox.com^$important'''
+- '@@||www.bitcoin.de^$important'''
+- '||10twotowers.com^$important'''
+- '||appcentereur.com^$important'''
+- '@@||gdatasecurity.de^$important'''
+- '@@||url2189.burgerme.de^$important'''
+- '@@||webshop.burgerme.de^$important'''
+- '@@||res.cloudinary.com^$important'''
+- '@@||tools.google.com^$important'''
+- '@@||update.googleapis.com^$important'''
+- '@@||activity.windows.com^$important'''
+- '@@||_http._tcp.ftp.hosteurope.de^$important'''
+- '@@||img.alibaba.com^$important'''
+- '@@||ynuf.alibaba.com^$important'''
+- '@@||login.aliexpress.com^$important'''
+- '@@||dynupdate.no-ip.com^$important'''
+- '||www.tiggerswelt.net^$important'''
+- '||www.btcmine.net^$important'''
+- '||mind.capital^$important'''
+- '@@||fls-eu.amazon.com^$important'''
+- '@@||kinesis.us-east-1.amazonaws.com^$important'''
+- '@@||device-metrics-us.amazon.com^$important'''
+- '@@||device-metrics-us-2.amazon.com^$important'''
+- '@@||mobileanalytics.us-east-1.amazonaws.com^$important'''
+- '@@||wieistmeineip.de^$important'''
+- '@@||li.newshosting.com^$important'''
+- '@@||updates.nextcloud.org^$important'''
+- '@@||stats.nextcloud.com^$important'''
+- '@@||device-messaging-na.amazon.com^$important'''
+- '||graizoah.com^'''
+- '||cometocleannow.com^'''
+- '||onclickalgo.com^'''
+- '||vpi.hfghty564hjghjhg.tech^'''
+- '||myfreshposts.com^'''
+- '||promotions.sunmaker.com^'''
+- '||awesometoptreats.com^'''
+- '||*webytom.com*^'''
+- '||joyspotmap.xyz^'''
+- '||fmv9kweoe06r.com^'''
+- '||parhegno.com^'''
+- '||qfjherc.com^'''
+- '||kundenclub.live^'''
+- '||click-now-extra-spezial.online^'''
+- '||message-alert.info^'''
+- '||censys-scanner.com^'''
+- '||myoffer-prizes.com^'''
+- '||click-on-this.today^'''
+- '||message-alert.info^'''
+- '||bbb-premium-club.com^'''
+- '||the-best-push-news.com^'''
+- '||click-now-on-this.online^'''
+- '||promotions.sunmaker.com^'''
+- '||lordlucky.de^'''
+- '||*.secret-vip.club^'''
+- '@@||badoo.com^$important'''
+- '@@||clientmetrics.kik.com^$important'''
+- '@@||clientmetrics-augmentum.kik.com^$important'''
+- '@@||gdataupdate-a.akamaihd.net^$important'''
+- '@@||*.raspberrypi.org^'''
+- '@@||updates.amazon.com^$important'''
+- '@@||boinc.bakerlab.org^$important'''
+- '@@||deutschlandcard01.wt-eu02.net^$important'''
+- '||new-incoming.mail^'''
+- '||*.vildq.com^'''
+- '||*.xyz^'''
+- '||*.nbryb.com^'''
+- '||*.9fdnhylgea8z.top^'''
+- '||thinkwhetherwor5.live^'''
+- '||agauxietor.com^'''
+- '||alltopposts.com^'''
+- '||tryplaybest.com^'''
+- '||click-to-watch.live^'''
+- '||*.click-to-read.online^'''
+- '||wealth-offers.com^'''
+- '||lapalingo.de^'''
+- '||live-gossip.online*^'''
+- '||worldnewstoday.site*^'''
+- '||*wowprize.online*^'''
+- '||read-the-news.online^'''
+- '||*rexsrv.com*^'''
+- '||*live-gossip.online*^'''
+- '||*pushstakes.com*^'''
+- '||*.top*^'''
+- '@@||*.homematic.com^$important'''
+- '@@||ccu3-update.homematic.com^$important'''
+- '@@||update-check.realvnc.com^$important'''
+- '@@||dlmping2.adobe.com^$important'''
+- '@@||*.geforce.com^$important'''
+- '@@||*.nvidia.com^$important'''
+- '@@||*.brave.com^$important'''
+- '@@||updates.bravesoftware.com^$important'''
+- '@@||completion.amazon.com^$important'''
+- '@@||updates-cdn.bravesoftware.com^$important'''
+- '||*.finditquick.online^'''
+- '@@||updateexte.services.openoffice.org^$important'''
+- '@@||ooo-updates.apache.org^$important'''
+- '@@||extension-updates.opera.com^$important'''
+- '@@||*.nextcloud.com^$important'''
+- '@@||*.synology.com^$important'''
+- '@@||*.update.microsoft.com^$important'''
+- '@@||trackingapi.kaufda.de^$important'''
+- '@@||tk.kaufda.de^$important'''
+- '@@||www.netzwelt.de^$important'''
+- '@@||www.coinbase.com^$important'''
+dhcp:
+  enabled: false
+  interface_name: ""
+  dhcpv4:
+    gateway_ip: ""
+    subnet_mask: ""
+    range_start: ""
+    range_end: ""
+    lease_duration: 86400
+    icmp_timeout_msec: 1000
+    options: []
+  dhcpv6:
+    range_start: ""
+    lease_duration: 86400
+    ra_slaac_only: false
+    ra_allow_slaac: false
+clients: []
+log_compress: false
+log_localtime: false
+log_max_backups: 0
+log_max_size: 100
+log_max_age: 3
+log_file: ""
+verbose: false
+schema_version: 7
