@@ -1,8 +1,8 @@
 bind_host: 0.0.0.0
 bind_port: 3000
 users:
-- name: felix
-  password: $AZxHCVsO
+- name: Seki92
+  password: $2a$10$oYe8vKqRCCrLfAT1FVGBRuG1PMFrltVchnpKFK0L3t7MXAZxHCVsO
 http_proxy: ""
 language: ""
 rlimit_nofile: 0
