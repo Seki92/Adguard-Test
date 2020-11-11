@@ -1,6 +1,8 @@
 bind_host: 0.0.0.0
 bind_port: 3000
 users:
+- name: felix
+  password: $AZxHCVsO
 http_proxy: ""
 language: ""
 rlimit_nofile: 0
